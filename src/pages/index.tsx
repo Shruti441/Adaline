@@ -8,10 +8,8 @@ import ScrollSection from '../components/ScrollSection'; // ✅ imported section
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const sectionRef = useRef<HTMLDivElement | null>(null);
-
+ const sectionRef = useRef<HTMLDivElement>(null);
   const [activeStep, setActiveStep] = useState(0);
-
   useEffect(() => {
     const handleScroll = () => {
       if (!videoRef.current || !sectionRef.current) return;
@@ -66,7 +64,7 @@ export default function Home() {
       </div>
 
       {/* Scroll-based dynamic section */}
-     <ScrollSection activeStep={activeStep} sectionRef={sectionRef} />
+     <ScrollSection activeStep={activeStep} setActiveStep={setActiveStep} sectionRef={sectionRef} />
 
 
       {/* Modal */}

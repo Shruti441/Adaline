@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-const RotatingCircleIcon = ({ number, label, children }) => {
+interface RotatingCircleIconProps {
+  number: number;
+  label: string;
+  children: ReactNode;
+}
+
+const RotatingCircleIcon = ({ number, label, children }: RotatingCircleIconProps) => {
   return (
     <div className="flex items-center gap-3 cursor-pointer group">
       <svg

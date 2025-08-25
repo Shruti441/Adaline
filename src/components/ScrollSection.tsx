@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 interface ScrollSectionProps {
+  activeStep: number;
+  setActiveStep: React.Dispatch<React.SetStateAction<number>>;
   sectionRef: React.RefObject<HTMLDivElement | null>;
 }
 
