@@ -20,7 +20,8 @@ export default function Testimonials() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {testimonials.map(({ name, role, quote, img }) => (
           <div key={name} className="bg-white rounded-lg p-8 shadow-lg">
-            <p className="italic text-gray-700 mb-6">"{quote}"</p>
+           <p className="italic text-gray-700 mb-6">{`"${quote}"`}</p>
+
             <div className="flex items-center space-x-4">
               <img src={img} alt={name} className="w-12 h-12 rounded-full object-cover" />
               <div>
