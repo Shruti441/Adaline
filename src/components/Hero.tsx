@@ -1,4 +1,7 @@
-export default function Hero({ logos }: { logos: JSX.Element[] }) {
+import { ReactElement } from 'react';
+
+export default function Hero({ logos }: { logos: ReactElement[] }) {
+
   return (
     <main className="flex flex-col justify-start items-center min-h-screen pt-20 text-center px-6">
       <h1 className="atlas-web-lg mx-[var(--grid-margin)] max-w-[32ch] md:text-[min(43px,min(calc(2.5vh+25px),calc(1.5vw+25px)))] md:leading-[calc(52/53)] md:tracking-[-0.04em]">
